@@ -24,7 +24,7 @@ jobs:
       run: docker build -t ghcr.io/${{ github.actor }}/python.app:${{ github.sha }} .
 
     - name: Push Docker image
-      run: docker push ghcr.io/${{ github.actor }}/python.app:${{ github.sha }} .
+      run: docker push ghcr.io/${{ github.actor }}/python.app:${{ github.sha }} 
 
     - name: Run Docker image
-      run: docker run ghcr.io/${{ github.actor }}/python.app:${{ github.sha }} .
+      run: docker run ghcr.io/${{ github.actor }}/python.app:${{ github.sha }} 
