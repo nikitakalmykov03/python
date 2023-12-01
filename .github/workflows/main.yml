@@ -21,10 +21,10 @@ jobs:
         password: ${{Secrets.GITHUB_TOKEN }}
 
     - name: Build and tag Docker image
-      run: docker build -t ghcr.io/${{ secrets.GITHUB_USERNAME }}/https://github.com/nikitakalmykov03/python.git:${{ github.sha }} .
+      run: docker build -t ghcr.io/${{ secrets.GITHUB_USERNAME }}/python.git:${{ github.sha }} .
 
     - name: Push Docker image
-      run: docker push ghcr.io/${{ secrets.GITHUB_USERNAME }}/https://github.com/nikitakalmykov03/python.git:${{ github.sha }}
+      run: docker push ghcr.io/${{ secrets.GITHUB_USERNAME }}/python.git:${{ github.sha }}
 
     - name: Run Docker image
-      run: docker run ghcr.io/${{ secrets.GITHUB_USERNAME }}/https://github.com/nikitakalmykov03/python.git:${{ github.sha }}
+      run: docker run ghcr.io/${{ secrets.GITHUB_USERNAME }}/python.git:${{ github.sha }}
