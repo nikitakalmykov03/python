@@ -39,4 +39,4 @@ jobs:
     steps:
       - name: Docker run
         run: docker run ghcr.io/nikitakalmykov03/python:1.0
-      - run: ssh -o "StrictHostKeyChecking no" 'nikitakalmykov03-python-g836p1w5kyk@nikitakalmykov03-python-g836p1w5kyk.ssh.ws-eu106.gitpod.io' "cd /workspace/nikitakalmykov03/python && docker compose pull && docker compose up -d"
+      - run: ssh -o "StrictHostKeyChecking no" 'nikitakalmykov03-python-g836p1w5kyk@nikitakalmykov03-python-g836p1w5kyk.ssh.ws-eu106.gitpod.io' "cd /workspace/nke-template && docker compose pull && docker compose up -d"
