@@ -24,10 +24,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Docker build
-        run: docker build -t ghcr.io/danknil/mishkakryt:1.0 .
+        run: docker build -t ghcr.io/nikitakalmykov03/python:1.0 .
 
       - name: Docker push
-        run: docker push ghcr.io/danknil/mishkakryt:1.0
+        run: docker push ghcr.io/nikitakalmykov03/python:1.0
 
   run_image:
     name: Run Docker image
@@ -38,4 +38,4 @@ jobs:
     needs: push_to_registries
     steps:
       - name: Docker run
-        run: docker run ghcr.io/danknil/mishkakryt:1.0
+        run: docker run ghcr.io/nikitakalmykov03/python:1.0
