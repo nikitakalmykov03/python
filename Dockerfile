@@ -1,7 +1,7 @@
 FROM python:latest
 
 WORKDIR /app
+ADD main.py /app
 
-COPY main.py .
+CMD ["python", "/app/main.py"]
 
-ENTRYPOINT ["python", "main.py"]
